@@ -1,0 +1,30 @@
+{
+    "name": "gam6itko/ozon-marketplace",
+    "description": "Ozon marketplace API client library",
+    "type": "library",
+    "keywords": ["ozon", "russia", "ozon-marketplace"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Strizhak",
+            "email": "gam6itko@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ozon\\": "src/Ozon"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.2"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}

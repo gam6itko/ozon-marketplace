@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="vendor/autoload.php">
+    <php>
+        <ini name="OZON_APPLICATION_ID" value=""/>
+        <ini name="OZON_SECRET_KEY" value=""/>
+        <ini name="OZON_PRODUCT_ID" value=""/>
+    </php>
+
+    <testsuites>
+        <testsuite name="ozon-marketplace">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
