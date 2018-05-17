@@ -1,6 +1,7 @@
 {
     "name": "gam6itko/ozon-marketplace",
     "description": "Ozon marketplace API client library",
+    "minimum-stability": "stable",
     "type": "library",
     "keywords": ["ozon", "russia", "ozon-marketplace"],
     "license": "MIT",

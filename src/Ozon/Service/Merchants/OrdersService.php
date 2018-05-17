@@ -75,7 +75,7 @@ class OrdersService extends AbstractMerchantsService
      * @param string $orderStateSysName
      * @return array
      */
-    public function cancelReasons($orderStateSysName)
+    public function cancelReasons(string $orderStateSysName)
     {
         $options = [
             'headers' => $this->getCommonHeaders(),
