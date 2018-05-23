@@ -1,4 +1,5 @@
 <?php
+
 namespace Ozon;
 
 use Doctrine\Common\Cache\ArrayCache;
@@ -69,15 +70,12 @@ class TokenStorage
 
     /**
      * @param string $serviceName
-     * @return string
      */
-    public function refreshToken(string $serviceName)
+    public function clearToken(string $serviceName): void
     {
         if ($this->cache->contains($serviceName)) {
             $this->cache->delete($serviceName);
         }
-
-        return $this->getToken($serviceName);
     }
 
     /**

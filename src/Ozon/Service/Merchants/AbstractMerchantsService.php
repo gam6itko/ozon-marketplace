@@ -1,4 +1,5 @@
 <?php
+
 namespace Ozon\Service\Merchants;
 
 use GuzzleHttp\Client;
@@ -56,6 +57,9 @@ abstract class AbstractMerchantsService
             }
             return $responseContent;
         } catch (BadResponseException $exc) {
+            if ($exc->getResponse()->getStatusCode() === 401) {
+                $this->tokenStorage->clearToken(self::SERVICE_NAME);
+            }
             $this->tryToAdaptException($exc);
             throw $exc;
         }
@@ -93,7 +97,6 @@ abstract class AbstractMerchantsService
         }
 
         if ($data) {
-            $this->tokenStorage->refreshToken(self::SERVICE_NAME);
             throw new ServiceException($data['ResponseStatus']['Message'], $data['ResponseStatus']['ErrorCode']);
         }
     }
