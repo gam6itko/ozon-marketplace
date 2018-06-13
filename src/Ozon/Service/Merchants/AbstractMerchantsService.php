@@ -74,7 +74,7 @@ abstract class AbstractMerchantsService
 //            'Accept-Charset'  => 'utf-8',
             'X-ApplicationId' => $this->tokenStorage->getApplicationId(),
             'X-Token'         => $this->tokenStorage->getToken(self::SERVICE_NAME),
-            'X-ApiVersion'    => 0.1
+            'X-ApiVersion'    => '0.1'
         ];
     }
 

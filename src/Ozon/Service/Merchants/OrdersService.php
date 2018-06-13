@@ -20,7 +20,21 @@ class OrdersService extends AbstractMerchantsService
     }
 
     /**
-     * @param array $query
+     * @param array $query Параметры строки запроса<br>
+     * OrderNumber	        String	    Номер заказа.<br>
+     * StateName	        String	    Статус заказа.<br>
+     * MinOrderSum	        Decimal	    Минимальная стоимость заказа.<br>
+     * MaxOrderSum	        Decimal	    Максимальная стоимость заказа.<br>
+     * DeliveryVariantName	String	    Тип доставки.<br>
+     * PaymentTypeName	    String	    Тип оплаты.<br>
+     * MinOrderDate	        DateTime	Минимальная дата заказа.<br>
+     * MaxOrderDate	        DateTime	Максимальная дата заказа.<br>
+     * MinModifyDate	    DateTime	Минимальная дата изменения заказа.<br>
+     * MaxModifyDate	    DateTime	Максимальная дата изменения заказа.<br>
+     * ItemsOnPage	        Int32	    Количество элементов, возвращаемых на одной странице.<br>
+     * PageNumber	        Int32	    Номер запрашиваемой страницы из общего результата поиска.<br>
+     * SortTag	            String      Порядок сортировки результата.<br>
+     *
      * @return array
      */
     public function getAll(array $query = [])
