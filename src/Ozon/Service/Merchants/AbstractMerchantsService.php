@@ -31,7 +31,7 @@ abstract class AbstractMerchantsService
     protected function adaptQueryParameters(array $query)
     {
         return array_map(function ($value) {
-            if ($value instanceof \DateTime) {
+            if ($value instanceof \DateTimeInterface) {
                 return $value->format(\DateTime::ISO8601);
             }
             return $value;
