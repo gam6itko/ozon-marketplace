@@ -1,4 +1,6 @@
-# Клиентская библеотека для работы с Ozon API.
+# Клиентская библеотека для работы с Ozon Marketplace API.
+
+Это библиотека для работы со старым API. Появился новый протокол [gam6itko/ozon-seller](https://github.com/gam6itko/ozon-seller).
 
 [Документация по Ozon Api](http://marketplace.ozon.ru/merchants-help)
 
